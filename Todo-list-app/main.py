@@ -7,10 +7,7 @@
 #     todos.append(todo)
 #     print(todos)
 
-
-password = input("Enter password:")
-
-while password != "pass123":
-    password = input("Enter password:")
-
-print("Password wac correct")
+x = 1
+while x <= 6:
+    x += 1
+    print(x)
