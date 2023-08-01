@@ -7,7 +7,3 @@ while True:
     todos.append(todo)
     print(todos)
 
-x = 1
-while x <= 6:
-    x += 1
-    print(x)
