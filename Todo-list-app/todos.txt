@@ -1,0 +1,5 @@
+play
+clean
+sing
+eat
+sleep
