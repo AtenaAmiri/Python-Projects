@@ -15,10 +15,15 @@ while True:
             file.close()
 
         case "show":
+            file = open("todos.txt", "r")
+            todos = file.readlines()
+            file.close()
+
             for index, item in enumerate(todos):
                 item = item.title()
                 row = f"{index + 1} - {item}"
                 print(row)
+
         case "edit":
             number = int(input("Number of the todo to edit: "))
             number = number - 1

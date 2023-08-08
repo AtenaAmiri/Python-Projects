@@ -3,3 +3,5 @@ clean
 sing
 eat
 sleep
+clear
+show
