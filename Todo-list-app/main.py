@@ -25,10 +25,10 @@ while True:
             #     new_item = item.strip("\n")
             #     new_todos.append(new_item)
 
-            new_todos = [item.strip("\n") for item in todos]
+            # new_todos = [item.strip("\n") for item in todos]
 
-            for index, item in enumerate(new_todos):
-                item = item.title()
+            for index, item in enumerate(todos):
+                item = item.title().strip("\n")
                 row = f"{index + 1} - {item}"
                 print(row)
 
