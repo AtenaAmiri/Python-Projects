@@ -19,7 +19,15 @@ while True:
             todos = file.readlines()
             file.close()
 
-            for index, item in enumerate(todos):
+            new_todos = []
+
+            # for item in todos:
+            #     new_item = item.strip("\n")
+            #     new_todos.append(new_item)
+
+            new_todos = [item.strip("\n") for item in todos]
+
+            for index, item in enumerate(new_todos):
                 item = item.title()
                 row = f"{index + 1} - {item}"
                 print(row)
