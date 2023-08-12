@@ -1,8 +1,4 @@
-paly a game
+play a game
 clean
 sing
 eat
-sleep
-clear
-show
-show

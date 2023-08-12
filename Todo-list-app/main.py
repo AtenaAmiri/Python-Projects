@@ -30,19 +30,29 @@ while True:
 
             with open("todos.txt", "r") as file:
                 todos = file.readlines()
-            print("existing todos", todos)
 
             new_todo = input("Enter new todo: ")
             todos[number] = new_todo + "\n"
-
-            print(" here is how it will be", todos)
 
             with open("todos.txt", "w") as file:
                 file.writelines(todos)
 
         case "delete":
             number = int(input("Number of the todo to delete: "))
-            todos.pop(number - 1)
+
+            with open("todos.txt", "r") as file:
+                file.readlines()
+                index = number - 1
+            todo_to_remove = todos[index].strip("\n")
+
+            todos.pop(index)
+
+            with open("todos.txt", "w") as file:
+                file.writelines(todos)
+
+            message = f"Todo {todo_to_remove} was removed from the list."
+            print(message)
+
         case "exit":
             break
         case _:
