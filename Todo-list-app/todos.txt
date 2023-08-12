@@ -5,3 +5,4 @@ eat
 sleep
 clear
 show
+show

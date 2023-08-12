@@ -4,28 +4,23 @@ while True:
     match user_action:
         case "add":
             todo = input("Enter a todo : ") + "\n"
-            file = open("todos.txt", "r")
-            todos = file.readlines()
-            file.close()
+
+
+            with open("todos.txt", "r") as file:
+                todos = file.readlines()
 
             todos.append(todo)
 
-            file = open("todos.txt", "w")
-            file.writelines(todos)
-            file.close()
+          
+            with open("todos.txt", "w") as file:
+                file.writelines(todos)
 
         case "show":
-            file = open("todos.txt", "r")
-            todos = file.readlines()
-            file.close()
+          
+            with open("todos.txt", "r") as file:
+                todos = file.readlines()
 
             new_todos = []
-
-            # for item in todos:
-            #     new_item = item.strip("\n")
-            #     new_todos.append(new_item)
-
-            # new_todos = [item.strip("\n") for item in todos]
 
             for index, item in enumerate(todos):
                 item = item.title().strip("\n")
