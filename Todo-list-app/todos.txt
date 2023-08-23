@@ -1,4 +1,1 @@
-play a game
-clean
-sing
-eat
+play
