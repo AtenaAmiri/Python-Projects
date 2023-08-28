@@ -1,1 +1,3 @@
-play
+play game
+eat Lunch
+take rest
